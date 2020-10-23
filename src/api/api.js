@@ -11,7 +11,12 @@ export const popularMovie = () =>
 export const searchInfo = (id) =>
   axios.get(`${url}/movie/${id}?api_key=${keyApi}`);
 
-export const searchMovie = (query = "batman") =>
+export const searchMovie = (query) =>
   axios.get(
     `${url}/search/movie?api_key=${keyApi}&language=en-US&page=1&include_adult=false&query=${query}`
   );
+export const Cast = (id) =>
+  axios.get(`${url}/movie/${id}/credits?api_key=${keyApi}`);
+
+export const Reviews = (id) =>
+  axios.get(`${url}/movie/${id}/reviews?api_key=${keyApi}`);

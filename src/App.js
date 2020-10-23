@@ -1,27 +1,34 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { Route, Switch } from "react-router-dom";
-import Navigation from "./components/Navigation";
+import Navigation from "./components/Navigation/Navigation";
 import HomePage from "./views/HomePage";
-import MoviePage from "./views/MoviePage";
-import MovieDetails from "./views/MovieDetailsPage";
-import Cast from "./views/Cast";
-import Reviews from "./views/Reviews";
+// import MoviePage from "./views/MoviePage";
+// import MovieDetails from "./views/MovieDetailsPage";
+import routes from "./routes";
+import Loader from "./utils/Loader";
 
-import routes from "./router";
+// const HomePageAsync = lazy(
+//   () => import("./views/HomePage") /* webpackChunkName: "home-page" */
+// );
+const MoviePageAsync = lazy(
+  () => import("./views/MoviePage") /* webpackChunkName: "home-page" */
+);
+const MovieDetailsAsync = lazy(
+  () => import("./views/MovieDetailsPage") /* webpackChunkName: "home-page" */
+);
 
 const App = () => (
   <>
     <Navigation />
     <>
-      <Switch>
-        <Route path={routes.home} exact component={HomePage} />
-        <Route path="/movies" exact component={MoviePage} />
-        <Route path="/movies/:movieId" component={MovieDetails} />
-        <Route path="/movies/:movieId/cast" component={Cast} />
-        <Route path="/movies/:movieId/reviews" component={Reviews} />
-      </Switch>
+      <Suspense fallback={<Loader />}>
+        <Switch>
+          <Route path={routes.home} exact component={HomePage} />
+          <Route path={routes.movies} exact component={MoviePageAsync} />
+          <Route path={routes.movieDetails} component={MovieDetailsAsync} />
+        </Switch>
+      </Suspense>
     </>
   </>
 );
-
 export default App;

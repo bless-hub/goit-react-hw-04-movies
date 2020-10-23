@@ -1,0 +1,35 @@
+  
+.list {
+    list-style: none;
+    margin: 0;
+    padding-left:  40px;
+    display: flex;
+    
+  }
+  
+  .item:not(:last-child) {
+    margin-right: 25px;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: rgb(253, 253, 253);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+  
+  .link_active {
+ 
+    color: rgb(255, 110, 14);
+ 
+  }
+  .header {
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    padding: 50px;
+    margin: 0;
+    box-shadow: 1px 1px 5px #555;
+    margin-bottom: 20px;
+  }

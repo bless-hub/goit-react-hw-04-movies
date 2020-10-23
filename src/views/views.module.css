@@ -1,0 +1,201 @@
+
+/* ====================HOMEPAGE ============================*/
+.homepage {
+    padding-top: 20px;
+  }
+  .heading {
+    margin: 0;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    color:rgb(43, 43, 43);
+    text-align: center;
+  }
+  
+  .list {
+    margin: 0;
+    padding:50px;
+    list-style: none;
+  }
+  .item {
+    box-shadow: 1px 1px 1px rgb(224, 210, 210);
+      padding: 20px;
+      display:flex;
+  }
+  
+  .item:hover {
+      background-color:rgb(248, 244, 244) ;
+    box-shadow: 1px 1px 1px rgb(204, 190, 190);
+  }
+  
+  .poster_search {
+    max-width: 130px;
+    height: auto;
+    margin-right: 20px;
+    object-fit: contain;
+  }
+
+  /* ====================HOMEPAGE ============================*/
+
+  /*==================== MOVIEPAGE============================ */
+ 
+  .movies {
+    padding: 20px 10px;
+  }
+  
+  .results {
+    color:rgb(43, 43, 43);
+    font-style: italic;
+    font-size: 18px;
+    padding: 10px;
+    margin: 0;
+  }
+ 
+  .link {
+    text-decoration: none;
+    color:rgb(43, 43, 43);
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .link:hover {
+      color: orangered;
+  }
+
+  /*==================== MOVIEPAGE============================ */
+
+  /* =================MOVIEDETAILS============================ */
+  .page {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .poster {
+    max-width: 450px;
+    height: 500px;
+    margin-right: 20px;
+    object-fit: contain;
+    
+  }
+  
+  .title {
+    text-align: left;
+    color: rgb(78, 76, 76);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .wrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 400px;
+    color: rgb(78, 76, 76);
+  }
+  
+  .overview {
+    font-size: 14px;
+    font-weight: 300;
+    color:rgb(78, 76, 76);
+  }
+  
+
+  
+  .button {
+    border: none;
+    background-color: rgb(59, 59, 59);
+    color: #ccc;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .button:hover {
+    background-color: rgb(247, 116, 29);
+  }
+
+
+   /* =================MOVIEDETAILSPAG============================ */
+/* =======================CAST=================================== */
+.button_list {
+  
+    list-style: none;
+    margin:0;
+    margin-top: 40px;
+    padding: 0;
+}
+.cast_list {
+    list-style: none;
+    margin: 0
+    
+ 
+}
+.item_list {
+    margin-bottom: 10px;
+}
+.img_cast {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+  }
+  .cast_link{ 
+
+  background-color: rgb(59, 59, 59);
+  color: #ccc;
+  width: 70px;
+  text-align: center;
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 7px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+
+
+}
+h4{
+   margin: 0;
+   color: rgb(59, 59, 59);
+}
+.cast_link:hover {
+    background-color: rgb(247, 116, 29);
+  }
+
+/* =======================CAST=================================== */
+/* =======================REVIEWS=================================== */
+
+.list_reviews {
+    width: 250px;
+    list-style: none;
+    margin: 0
+}
+.item_reviews {
+    margin: 0
+}
+.reviews_link{ 
+
+    background-color: rgb(59, 59, 59);
+    color: #ccc;
+    width: 70px;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 7px;
+    text-decoration: none;
+    border-radius: 5px;
+  
+  
+  }
+  .reviews_link:hover {
+    background-color: rgb(247, 116, 29);
+  }
+
+
+/* =======================REVIEWS=================================== */

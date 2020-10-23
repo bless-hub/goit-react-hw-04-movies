@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import routes from "../routes";
+import style from "./views.module.css";
 
 import * as API from "../api/api";
 
@@ -17,19 +19,32 @@ export default class HomePage extends Component {
 
   render() {
     const { movies } = this.state;
-    const { match } = this.props;
 
     return (
-      <>
-        <h2>Trending today</h2>
-        <ul>
+      <div className={style.homepage}>
+        <h2 className={style.heading}>Trending today</h2>
+        <ul className={style.list}>
           {movies.map((movie) => (
-            <li key={movie.id}>
-              <Link to={`${match.url}/${movie.id}`}>{movie.title}</Link>
+            <li key={movie.id} className={style.item}>
+              <img
+                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                alt=""
+                className={style.poster_search}
+              />
+
+              <Link
+                className={style.link}
+                to={{
+                  pathname: `${routes.movies}/${movie.id}`,
+                  state: { from: this.props.location },
+                }}
+              >
+                {movie.title}
+              </Link>
             </li>
           ))}
         </ul>
-      </>
+      </div>
     );
   }
 }
