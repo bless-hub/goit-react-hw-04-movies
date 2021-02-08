@@ -32,7 +32,7 @@ function App() {
   }
   return (
     <div className={darkMode ? "darkMode" : "lightMode"}>
-      <Navigation onClick={changeTheme} />
+      <Navigation onChange={changeTheme} darkMode={darkMode} />
       <>
         <Suspense fallback={<Loader />}>
           <Switch>

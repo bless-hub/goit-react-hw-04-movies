@@ -4,8 +4,9 @@ import ThemeMode from "../ThemeMode/ThemeMode";
 
 import style from "./navigation.module.css";
 
-const Navigation = ({ onClick }) => (
+const Navigation = ({ onChange, darkMode }) => (
   <header className={style.header}>
+    <ThemeMode onChange={onChange} darkMode={darkMode} />
     <ul className={style.list}>
       <li className={style.item}>
         <NavLink
@@ -27,7 +28,6 @@ const Navigation = ({ onClick }) => (
         </NavLink>
       </li>
     </ul>
-    <ThemeMode onClick={onClick} />
   </header>
 );
 
