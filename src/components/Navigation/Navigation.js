@@ -1,8 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import ThemeMode from "../ThemeMode/ThemeMode";
+
 import style from "./navigation.module.css";
 
-const Navigation = () => (
+const Navigation = ({ onClick }) => (
   <header className={style.header}>
     <ul className={style.list}>
       <li className={style.item}>
@@ -25,6 +27,7 @@ const Navigation = () => (
         </NavLink>
       </li>
     </ul>
+    <ThemeMode onClick={onClick} />
   </header>
 );
 

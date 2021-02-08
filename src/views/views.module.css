@@ -2,6 +2,8 @@
 /* ====================HOMEPAGE ============================*/
 .homepage {
     padding-top: 20px;
+    width:960px;
+    margin:  auto;
   }
   .heading {
     margin: 0;
@@ -13,26 +15,26 @@
   }
   
   .list {
-    margin: 0;
-    padding:50px;
-    list-style: none;
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.9fr 0.9fr 1fr;
+  gap: 30px 30px;
+   
   }
   .item {
-    box-shadow: 1px 1px 1px rgb(224, 210, 210);
-      padding: 20px;
-      display:flex;
+    list-style: none;
+  
   }
   
-  .item:hover {
-      background-color:rgb(248, 244, 244) ;
-    box-shadow: 1px 1px 1px rgb(204, 190, 190);
-  }
+  
   
   .poster_search {
-    max-width: 130px;
-    height: auto;
-    margin-right: 20px;
-    object-fit: contain;
+object-fit: contain;
+width: 100% 
+  }
+  .poster_search:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      
   }
 
   /* ====================HOMEPAGE ============================*/
@@ -55,7 +57,12 @@
     text-decoration: none;
     color:rgb(43, 43, 43);
     font-size: 20px;
-    font-weight: 500;
+
+    display: flex;
+    justify-content: center;
+
+  
+
   }
   .link:hover {
       color: orangered;
@@ -101,8 +108,6 @@
     font-weight: 300;
     color:rgb(78, 76, 76);
   }
-  
-
   
   .button {
     border: none;
@@ -179,7 +184,6 @@ h4{
     margin: 0
 }
 .reviews_link{ 
-
     background-color: rgb(59, 59, 59);
     color: #ccc;
     width: 70px;
@@ -190,12 +194,8 @@ h4{
     padding: 7px;
     text-decoration: none;
     border-radius: 5px;
-  
-  
   }
   .reviews_link:hover {
     background-color: rgb(247, 116, 29);
   }
-
-
 /* =======================REVIEWS=================================== */

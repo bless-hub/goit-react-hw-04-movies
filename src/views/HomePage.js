@@ -22,7 +22,7 @@ export default class HomePage extends Component {
 
     return (
       <div className={style.homepage}>
-        <h2 className={style.heading}>Trending today</h2>
+        <h2 className={style.heading}>TRENDING TODAY</h2>
         <ul className={style.list}>
           {movies.map((movie) => (
             <li key={movie.id} className={style.item}>
