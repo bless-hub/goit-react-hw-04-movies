@@ -49,36 +49,37 @@ export default class MoviePage extends Component {
     return (
       <div className={style.movies}>
         <SearchMovieForm onSubmit={this.handleSubmitValue} />
+        <div className={style.homepage}>
+          <ul className={style.list}>
+            {movies.map((movie) => (
+              <li key={movie.id} className={style.item}>
+                {movie.poster_path ? (
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                    alt=""
+                    className={style.poster_search}
+                  />
+                ) : (
+                  <img
+                    src={`https://via.placeholder.com/150x225.png?text=Image%20not%20found`}
+                    alt=""
+                    className={style.poster_search}
+                  />
+                )}
 
-        <ul className={style.list}>
-          {movies.map((movie) => (
-            <li key={movie.id} className={style.item}>
-              {movie.poster_path ? (
-                <img
-                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                  alt=""
-                  className={style.poster_search}
-                />
-              ) : (
-                <img
-                  src={`https://via.placeholder.com/150x200.png?text=Image%20not%20found`}
-                  alt=""
-                  className={style.poster_search}
-                />
-              )}
-
-              <Link
-                className={style.link}
-                to={{
-                  pathname: `${routes.movies}/${movie.id}`,
-                  state: { from: location },
-                }}
-              >
-                {movie.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
+                <Link
+                  className={style.link}
+                  to={{
+                    pathname: `${routes.movies}/${movie.id}`,
+                    state: { from: location },
+                  }}
+                >
+                  {movie.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     );
   }

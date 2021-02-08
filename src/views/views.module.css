@@ -10,7 +10,6 @@
     padding: 10px;
     font-size: 30px;
     font-weight: 700;
-    color:rgb(43, 43, 43);
     text-align: center;
   }
   
@@ -26,15 +25,17 @@
   
   }
   
-  
-  
+ 
   .poster_search {
 object-fit: contain;
 width: 100% 
   }
   .poster_search:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-      
+    box-shadow: 0 0 20px rgba(0,0,0,0.6), 0 10px 20px rgba(0,0,0,0.22);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(0.95);
+    transition: 0.3s linear
   }
 
   /* ====================HOMEPAGE ============================*/
@@ -43,6 +44,7 @@ width: 100%
  
   .movies {
     padding: 20px 10px;
+    height: 409px;
   }
   
   .results {
@@ -55,9 +57,7 @@ width: 100%
  
   .link {
     text-decoration: none;
-    color:rgb(43, 43, 43);
     font-size: 20px;
-
     display: flex;
     justify-content: center;
 
@@ -91,7 +91,7 @@ width: 100%
   
   .title {
     text-align: left;
-    color: rgb(78, 76, 76);
+
     margin: 0;
     padding: 0;
   }
@@ -122,6 +122,7 @@ width: 100%
   
   .button:hover {
     background-color: rgb(247, 116, 29);
+    transition: 0.5s linear;
   }
 
 
