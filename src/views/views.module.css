@@ -44,7 +44,7 @@ width: 100%
  
   .movies {
     padding: 20px 10px;
-    height: 409px;
+   height: 100%;
   }
   
   .results {
